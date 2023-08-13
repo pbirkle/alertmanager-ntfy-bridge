@@ -1,0 +1,1 @@
+# alertmanager-ntfy-bridge
