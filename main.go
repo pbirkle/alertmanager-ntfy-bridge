@@ -33,6 +33,7 @@ func HandleAlert(responseWriter http.ResponseWriter, request *http.Request) {
 		log.Debugf("POST body: %s", string(body))
 	} else {
 		log.Warnf("HTTP method %s for endpoint %s not found", requestMethod, ALERT_ENDPOINT)
+		responseWriter.WriteHeader(http.StatusMethodNotAllowed)
 	}
 
 	log.Info("handled request")
